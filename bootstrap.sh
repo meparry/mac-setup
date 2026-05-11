@@ -13,7 +13,7 @@ if ! command -v chezmoi &>/dev/null; then
 fi
 
 # Apply dotfiles
-chezmoi init --apply https://github.com/meparry/mac-setup.git
+chezmoi init --apply --force https://github.com/meparry/mac-setup.git
 
 # Install all brew packages
 brew bundle --file="$(chezmoi source-path)/Brewfile"
