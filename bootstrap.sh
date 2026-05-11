@@ -24,4 +24,7 @@ if [ ! -d "$HOME/.config/emacs" ]; then
 fi
 ~/.config/emacs/bin/doom sync
 
-echo "Done. Open a new shell."
+# macOS settings
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+echo "Done. Log out and back in for key repeat to take effect."
