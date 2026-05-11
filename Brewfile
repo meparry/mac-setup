@@ -2,6 +2,7 @@ tap "d12frosted/emacs-plus"
 
 brew "asdf"
 brew "bat"
+brew "mas"
 brew "chezmoi"
 brew "eza"
 brew "fzf"
@@ -20,3 +21,5 @@ cask "git-credential-manager"
 cask "maccy"
 cask "rectangle"
 cask "zed"
+
+mas "Amphetamine", id: 937984704
