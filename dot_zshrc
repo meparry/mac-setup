@@ -1,0 +1,19 @@
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH=~/.config/emacs/bin:$PATH
+
+# Created by `pipx` on 2024-09-15 19:25:54
+export PATH="$PATH:/Users/michael/.local/bin"
+
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+eval "$(starship init zsh)"
+
+alias cla='claude --dangerously-skip-permissions'
+alias ls='eza'
+alias ll='eza -l'
+alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
+alias vim='nvim'
+alias emacs='emacsclient -c -n -a ""'
+
+alias ca='cd ~/cordia'

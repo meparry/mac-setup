@@ -1,0 +1,98 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "context_servers": {
+    "chrome-devtools": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": [
+        "chrome-devtools-mcp@latest",
+        "--autoConnect",
+        "--channel=beta"
+      ]
+    }
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+      "default_mode": "bypassPermissions",
+      "default_config_options": {
+        "mode": "bypassPermissions",
+      },
+    },
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+    "selections_menu": false,
+  },
+  "scrollbar": {
+    "diagnostics": "none",
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true,
+  },
+  "tabs": {
+    "file_icons": false,
+  },
+  "outline_panel": {
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "project_panel": {
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "show_wrap_guides": true,
+  "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-thinking-latest",
+    },
+    "model_parameters": [],
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "base_keymap": "Cursor",
+  "vim_mode": true,
+  "ui_font_size": 15,
+  "buffer_font_size": 12,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+  "indent_guides": {
+    "enabled": false,
+  },
+  "gutter": {
+    "line_numbers": false,
+  },
+  "git": {
+    "git_gutter": "hide",
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+}

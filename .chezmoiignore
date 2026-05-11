@@ -1,0 +1,9 @@
+# nvim is a cloned git repo — don't track its git internals
+dot_config/nvim/dot_git/**
+dot_config/nvim/dot_github/**
+dot_config/nvim/dot_gitignore
+dot_config/nvim/dot_stylua.toml
+dot_config/nvim/LICENSE.md
+dot_config/nvim/README.md
+dot_config/nvim/doc/**
+dot_config/nvim/lazy-lock.json
