@@ -11,6 +11,7 @@ brew "navi"
 brew "neovim"
 brew "starship"
 brew "tealdeer"
+brew "tree-sitter"
 brew "zoxide"
 brew "d12frosted/emacs-plus/emacs-plus@30"
 
