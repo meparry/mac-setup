@@ -1,0 +1,8 @@
+{
+  "theme": "auto",
+  "skipDangerousModePermissionPrompt": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": ["Thinking"]
+  }
+}
