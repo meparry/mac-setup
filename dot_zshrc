@@ -17,3 +17,4 @@ alias vim='nvim'
 alias emacs='emacsclient -c -n -a ""'
 
 alias ca='cd ~/cordia'
+eval "$(mise activate zsh)"
