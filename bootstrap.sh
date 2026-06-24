@@ -12,8 +12,12 @@ if ! command -v chezmoi &>/dev/null; then
   brew install chezmoi
 fi
 
-# Apply dotfiles
-chezmoi init --apply --force https://github.com/meparry/mac-setup.git
+# Apply dotfiles.
+# `init` only clones when the source dir is absent; on re-runs it does NOT
+# pull, so the on-disk source (and its Brewfile) would stay stale. `update`
+# does a git pull + apply, guaranteeing the latest source before brew bundle.
+chezmoi init https://github.com/meparry/mac-setup.git
+chezmoi update --force
 
 # Install all brew packages.
 # --adopt lets Homebrew take over apps already present in /Applications
