@@ -13,11 +13,16 @@ if ! command -v chezmoi &>/dev/null; then
 fi
 
 # Apply dotfiles.
-# `init` only clones when the source dir is absent; on re-runs it does NOT
-# pull, so the on-disk source (and its Brewfile) would stay stale. `update`
-# does a git pull + apply, guaranteeing the latest source before brew bundle.
-chezmoi init https://github.com/meparry/mac-setup.git
-chezmoi update --force
+# `chezmoi init` only clones when the source dir is absent; on re-runs it does
+# NOT pull, so the on-disk source (and its Brewfile) would stay stale and
+# brew bundle below would reinstall removed packages (e.g. asdf). Force the
+# existing source to exactly match origin before applying.
+SOURCE_DIR="$HOME/.local/share/chezmoi"
+if [ -d "$SOURCE_DIR/.git" ]; then
+  git -C "$SOURCE_DIR" fetch origin
+  git -C "$SOURCE_DIR" reset --hard origin/main
+fi
+chezmoi init --apply --force https://github.com/meparry/mac-setup.git
 
 # Install all brew packages.
 # --adopt lets Homebrew take over apps already present in /Applications
