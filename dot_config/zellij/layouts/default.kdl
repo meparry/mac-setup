@@ -1,0 +1,8 @@
+// Default layout without the bottom status-bar (hotkey/mode info bar).
+// Overrides Zellij's built-in default layout.
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane
+}
