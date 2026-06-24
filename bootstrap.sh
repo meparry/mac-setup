@@ -15,7 +15,11 @@ fi
 # Apply dotfiles
 chezmoi init --apply --force https://github.com/meparry/mac-setup.git
 
-# Install all brew packages
+# Install all brew packages.
+# --adopt lets Homebrew take over apps already present in /Applications
+# (e.g. a manually-installed Zed.app) instead of aborting with
+# "It seems there is already an App at ...".
+export HOMEBREW_CASK_OPTS="--adopt"
 brew bundle --file="$(chezmoi source-path)/Brewfile"
 
 # Doom Emacs install/sync
