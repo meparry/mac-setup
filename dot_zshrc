@@ -1,4 +1,3 @@
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH=~/.config/emacs/bin:$PATH
 
@@ -14,7 +13,11 @@ alias ls='eza'
 alias ll='eza -l'
 alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
 alias vim='nvim'
-alias emacs='emacsclient -c -n -a ""'
+alias emacs='emacsclient -c -nw -a ""'
 
 alias ca='cd ~/cordia'
+alias sand-dev='/Users/michaelparry/monorepo/go/sand/bin/sand'
 eval "$(mise activate zsh)"
+
+# Forge monorepo tools
+export PATH="/Users/michaelparry/.local/bin:/Users/michaelparry/.local/share/aquaproj-aqua/bin:/Users/michaelparry/monorepo/tools:$PATH"
