@@ -1,6 +1,5 @@
 tap "d12frosted/emacs-plus"
 
-brew "asdf"
 brew "bat"
 brew "chezmoi"
 brew "eza"
